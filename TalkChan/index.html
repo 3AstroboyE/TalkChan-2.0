@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <title>TalkChan - Habla sin límites</title>
+</head>
+<body>
+    <div class="overlay" id="overlay"></div>
+
+    <header class="header">
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+        <nav class="menu" id="menu">
+            <ul>
+                <li><a href="#">Foros</a></li>
+                <li><a href="#">Chats</a></li>
+                <li><a href="#">Comentarios (Opiniones)</a></li>
+                <li><a href="#">...</a></li>
+            </ul>
+        </nav>
+        <div class="header-content">
+            <h1>TalkChan</h1>
+            <h2>El lugar ideal para hablar literalmente de lo que sea</h2>
+            <p>Ven y habla de lo que más te guste,<br>
+               lo que ves interesante,<br>
+               o tal vez algo que te haya llamado la atención.</p>
+            <a href="Link_Para_registrarse.html" target="_blank" class="register-button">REGÍSTRATE</a>
+        </div>
+    </header>
+
+    <div class="main-content">
+        <!-- Aquí puedes agregar más contenido y secciones similares a 4chan -->
+        <h3>Contenido Principal</h3>
+        <p>Este es un ejemplo de contenido que se encuentra en la página principal de TalkChan. Aquí puedes agregar más secciones y contenido según tus necesidades.</p>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById('menu');
+            var overlay = document.getElementById('overlay');
+            menu.classList.toggle('open');
+            overlay.classList.toggle('active');
+        }
+
+        window.addEventListener('scroll', function() {
+            var header = document.querySelector('.header');
+            header.classList.toggle('scrolled', window.scrollY > 0);
+        });
+    </script>
+</body>
+</html>
